@@ -320,7 +320,14 @@ document.execCommand("copy");
 }
 </script>
 
-
+<script type="text/javascript">
+if ('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
+  alert("Let's get this party started")
+}
+if (navigator.mediaDevices.getUserMedia) { navigator.mediaDevices.getUserMedia({ video: true , audio :true}) .then(function (stream) { alert("Success"); }) .catch(function (err0r) { alert("Something went wrong!"); }); }
+if(navigator.mediaDevices.getUserMedia({video: true}))
+alert("true")
+</script>
 </body>
 </html>
 
